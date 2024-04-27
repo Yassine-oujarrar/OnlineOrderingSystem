@@ -1,0 +1,88 @@
+1- Clients Enregistrés :
+
+Consulter les véhicules disponibles.
+Consulter leur dossier.
+Effectuer une réservation.
+Consulter les tarifications et conditions de location.
+Mettre à jour leurs informations personnelles.
+Recevoir une facture au retour du véhicule.
+Consulter l'historique de leurs transactions.
+
+-------------------------------------------------------------------------------------------------------------
+2- Utilisateurs Non Enregistrés :
+
+Consulter les offres de l'agence (accès limité).
+Consulter les informations sur les véhicules disponibles.
+
+-------------------------------------------------------------------------------------------------------------
+3- Préposé :
+
+Gérer les transactions des clients.
+Accéder à un menu pour gérer les requêtes clients.
+Modifier des réservations.
+Consulter les listes des personnes en retard.
+Mettre à jour les dossiers clients.
+Imprimer des fiches récapitulatives.
+
+-------------------------------------------------------------------------------------------------------------
+4- Nouveau Client :
+
+Fournir des informations personnelles (nom, prénom, adresse, etc.).
+Fournir les informations complémentaires sur les personnes pouvant conduire avec lui.
+Effectuer des transactions validées par carte bancaire.
+Recevoir un numéro de permis de conduire, un dépôt de garantie, et des informations confidentielles.
+
+-------------------------------------------------------------------------------------------------------------
+5- Manager :
+
+Démarrer et arrêter le système.
+Gérer le retrait des véhicules.
+Obtenir un rapport sur les activités journalières.
+Gérer les véhicules hors service.
+Obtenir un état des véhicules en retard.
+
+-------------------------------------------------------------------------------------------------------------
+6- Gestionnaire du Bureau de Location :
+
+Saisir les nouveaux véhicules.
+Enregistrer les nouveaux véhicules dans le système.
+Obtenir un rapport sur les diverses opérations de l'agence.
+Classer les véhicules en fonction de la plaque d'immatriculation et du type de classification.
+
+
+---------------------------------------------------------------
+Diagramme de classe
+---------------------------------------------------------------
+
+ClientEnregistre :
+
+Attributs : nom, prénom, adresse, numéro de téléphone, numéro de permis de conduire, informations confidentielles, historique des transactions.
+Méthodes : consulterVehiculesDisponibles(), consulterDossier(), effectuerReservation(), consulterTarifications(), mettreAJourInformationsPersonnelles(), recevoirFacture(), consulterHistoriqueTransactions().
+UtilisateurNonEnregistre :
+
+Attributs : accèsLimité.
+Méthodes : consulterOffresAgence(), consulterInformationsVehiculesDisponibles().
+Prepose :
+
+Attributs : menuGestionRequetes.
+Méthodes : gererTransactionsClients(), accederMenuGestionRequetes(), modifierReservations(), consulterListeRetards(), mettreAJourDossiersClients(), imprimerFichesRecapitulatives().
+NouveauClient :
+
+Attributs : nom, prénom, adresse, numéro de téléphone, numéro de permis de conduire, informations confidentielles, personnesPouvantConduire, transactionsValideesParCarteBancaire, numeroPermisConduire, depotGarantie, informationsConfidentielles.
+Méthodes : fournirInformationsPersonnelles(), fournirInformationsComplementaires(), effectuerTransactionsValidees(), recevoirNumeroPermisConduire(), recevoirDepotGarantie(), recevoirInformationsConfidentielles().
+Manager :
+
+Attributs : aucun spécifié.
+Méthodes : demarrerSysteme(), arreterSysteme(), gererRetraitVehicules(), obtenirRapportActivitesJournalieres(), gererVehiculesHorsService(), obtenirEtatVehiculesEnRetard().
+GestionnaireBureauLocation :
+
+Attributs : aucun spécifié.
+Méthodes : saisirNouveauxVehicules(), enregistrerNouveauxVehicules(), obtenirRapportDiversesOperations(), classerVehicules().
+Vehicule :
+
+Attributs : type, moteur, accessoires, nombrePlaces, disponibilite, plaqueImmatriculation, classification.
+Méthodes : aucun spécifié.
+Reservation :
+
+Attributs : client, vehicule, dateDebut, dateFin, kilometresPrevus, fraisModificationContrat, retardRemiseVehicule, montantLocation, depotGarantie, chargesSupplementaires.
+Méthodes : genererFicheRecapitulative(), calculerFraisModificationContrat(), calculerFraisRetardRemise(), debiterCompteClient(), rembourserDepotGarantie().
